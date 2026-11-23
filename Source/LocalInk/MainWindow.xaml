@@ -5,8 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LocalInk"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="LocalInk" Height="300" Width="350">
+    <Grid Margin="15" x:Name="MainGrid">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Mode Selection -->
+        <ComboBox Grid.Row="0"
+              Height="30"
+              Width="180"
+              HorizontalAlignment="Left"
+              SelectedIndex="0"
+              x:Name="cbMode">
+            <ComboBoxItem Content="Professional"/>
+            <ComboBoxItem Content="Friendly"/>
+            <ComboBoxItem Content="Business Email"/>
+        </ComboBox>
+
+        <!-- Output Area -->
+        <TextBox Grid.Row="2"
+             AcceptsReturn="True"
+             TextWrapping="Wrap"
+             VerticalScrollBarVisibility="Auto"
+             FontSize="14"
+             Padding="10"
+             Text="[Rewritten text will appear here]"
+             x:Name="txtOutput"/>
+
+        <!-- Confrim Copy Label -->
+        <Label x:Name="lblConfirmCopy"
+            Grid.Row="4"
+            Content=""
+            Foreground="Green"
+            Padding="5"
+            />       
+        <!-- Buttons -->
+        <StackPanel Grid.Row="5"
+                Orientation="Horizontal"
+                HorizontalAlignment="Center">
+
+            <Button Content="Copy"
+                Width="100"
+                Height="35"
+                Margin="5"
+                x:Name="btnCopy" Click="btnCopy_Click"/>
+
+            <Button Content="Regenerate"
+                Width="100"
+                Height="35"
+                Margin="5"
+                x:Name="btnRegenerate" Click="btnRegenerate_Click"/>
+        </StackPanel>
+
     </Grid>
 </Window>
