@@ -38,15 +38,9 @@
              Text="[Rewritten text will appear here]"
              x:Name="txtOutput"/>
 
-        <!-- Confrim Copy Label -->
-        <Label x:Name="lblConfirmCopy"
-            Grid.Row="4"
-            Content=""
-            Foreground="Green"
-            Padding="5"
-            />       
+              
         <!-- Buttons -->
-        <StackPanel Grid.Row="5"
+        <StackPanel Grid.Row="4"
                 Orientation="Horizontal"
                 HorizontalAlignment="Center">
 
